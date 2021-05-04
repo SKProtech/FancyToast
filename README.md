@@ -1,3 +1,9 @@
+
+[![](https://jitpack.io/v/SKProtech/FancyToast.svg)](https://jitpack.io/#SKProtech/FancyToast)
+
+
+
+
 ## Prerequisites
 
 Add this in your root build.gradle file (not your module build.gradle file):
