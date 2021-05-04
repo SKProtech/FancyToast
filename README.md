@@ -28,7 +28,7 @@ dependencies {
 ```
 ## Screenshots
 
-<img src="https://github.com/SKProtech/FancyToast/master/Screenshot_20210504-132720.png">
+<img src="https://github.com/SKProtech/FancyToast/blob/master/Screenshot_20210504-132648.png"/>
 
 
 ## Usage
