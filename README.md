@@ -26,6 +26,11 @@ dependencies {
   
 	}
 ```
+## Screenshots
+
+<img src="https://github.com/SKProtech/FancyToast/master/Screenshot_20210504-132720.png">
+
+
 ## Usage
 
   To display an Success Toast:
