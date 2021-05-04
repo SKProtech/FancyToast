@@ -26,3 +26,29 @@ dependencies {
   
 	}
 ```
+## Usage
+
+  To display an Success Toast:
+```java
+
+     FancyTaost.makeText(getApplicationContext(), "Example of Success Toast", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
+
+```
+  To display an Warning Toast:
+```java
+
+     FancyTaost.makeText(getApplicationContext(), "Example of Warning Toast", FancyTaost.LENGTH_LONG, FancyTaost.WARNING).show();
+
+```
+  To display an Info Toast:
+```java
+
+     FancyTaost.makeText(getApplicationContext(), "Example of Info Toast", FancyTaost.LENGTH_LONG, FancyTaost.INFO).show();
+
+```
+  To display an Error Toast:
+```java
+
+     FancyTaost.makeText(getApplicationContext(), "Example of Error Toast", FancyTaost.LENGTH_LONG, FancyTaost.ERROR).show();
+
+```
