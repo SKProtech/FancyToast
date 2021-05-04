@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_vertical|center_horizontal"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="Fancy Toast Library"
+		android:typeface="serif"
+		android:gravity="center_vertical|center_horizontal"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Library Design by AnugDev"
+		android:layout_margin="15dp"
+		android:typeface="serif"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Library Created by Protech Inc"
+		android:layout_margin="15dp"
+		android:typeface="serif"
+		android:layout_marginTop="0dp"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="SuccessToast"
+		android:id="@+id/activitymainSuccess"
+		android:layout_margin="15dp"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="WarningToast"
+		android:layout_margin="15dp"
+		android:id="@+id/activitymainWarning"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="InfoToast"
+		android:layout_margin="15dp"
+		android:id="@+id/activitymainInfo"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="ErrorToast"
+		android:layout_margin="15dp"
+		android:id="@+id/activitymainError"/>
+
+</LinearLayout>
+
