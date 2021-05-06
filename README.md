@@ -17,7 +17,7 @@ Add this to your module's build.gradle file
 ```gradle
 dependencies {
   ...
-  implementation 'com.github.SKProtech:FancyToast:1.0.0'
+  implementation 'com.github.SKProtech:FancyToast:1.1.0'
 }
 ```
 ## Screenshots
