@@ -12,8 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.my.newproject2.R;
-
 public class FancyTaost {
    
   public static final int LENGTH_SHORT = 0;
