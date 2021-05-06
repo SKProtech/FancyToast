@@ -95,7 +95,7 @@ public class FancyTaost {
     RoundAndBorder(toastBorderContent, "#FFFFFF", 0, "#00000000", 8);
     
     toastBorder.setElevation(4f);
-    toastMessage.setText(!TextUtils.isEmpty(msg) ? msg : DEFAULT_MESSAGE);
+    toastMessage.setText(!TextUtils.isEmpty(msg) ? msg : defaultMessage);
     
     toast.setView(toastView);
     toast.setDuration(length);
