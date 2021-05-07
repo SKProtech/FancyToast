@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,10 @@ public class FancyTaost {
   public static final int DEFAULT = 5;
   
   public static String defaultMessage;
+  public static String defaultTitle;
+  public static Typeface defaultTypeface = null;
+  
+  public static Builder builder;
   
   private static LinearLayout toastBorder;
   private static LinearLayout toastBorderContent;
@@ -54,7 +59,7 @@ public class FancyTaost {
       case SUCCESS:
         toastImage.setImageResource(R.drawable.success);
         RoundAndBorder(toastBorder, "#47D765", 0, "#00000000", 8);
-        toastTitle.setText("Success");
+        defaultTitle = !TextUtils.isEmpty(defaultTitle) ? defaultTitle : "Success";
         toastTitle.setTextColor(Color.parseColor("#47D765"));
         defaultMessage = "Example of Success Toast";
       break;
@@ -62,7 +67,7 @@ public class FancyTaost {
       case WARNING:
         toastImage.setImageResource(R.drawable.warn);
         RoundAndBorder(toastBorder, "#FFC122", 0, "#00000000", 8);
-        toastTitle.setText("Warning");
+        defaultTitle = !TextUtils.isEmpty(defaultTitle) ? defaultTitle : "Warning";
         toastTitle.setTextColor(Color.parseColor("#FFC122"));
         defaultMessage = "Example of Warning Toast";
       break;
@@ -70,7 +75,7 @@ public class FancyTaost {
       case ERROR:
         toastImage.setImageResource(R.drawable.error);
         RoundAndBorder(toastBorder, "#F44236", 0, "#00000000", 8);
-        toastTitle.setText("Error");
+        defaultTitle = !TextUtils.isEmpty(defaultTitle) ? defaultTitle : "Error";
         toastTitle.setTextColor(Color.parseColor("#F44236"));
         defaultMessage = "Example of Error Toast";
       break;
@@ -78,7 +83,7 @@ public class FancyTaost {
       case INFO:
         toastImage.setImageResource(R.drawable.info);
         RoundAndBorder(toastBorder, "#2F87EB", 0, "#00000000", 8);
-        toastTitle.setText("Info");
+        defaultTitle = !TextUtils.isEmpty(defaultTitle) ? defaultTitle : "Info";
         toastTitle.setTextColor(Color.parseColor("#2F87EB"));
         defaultMessage = "Example of Info Toast";
       break;
@@ -86,7 +91,7 @@ public class FancyTaost {
       case DEFAULT:
         toastImage.setImageResource(R.drawable.info);
         RoundAndBorder(toastBorder, "#D8D8D8", 0, "#00000000", 8);
-        toastTitle.setText("Default");
+        defaultTitle = !TextUtils.isEmpty(defaultTitle) ? defaultTitle : "Default";
         toastTitle.setTextColor(Color.parseColor("#D8D8D8"));
         defaultMessage = "Example of Default Toast";
       break;
@@ -95,13 +100,36 @@ public class FancyTaost {
     RoundAndBorder(toastBorderContent, "#FFFFFF", 0, "#00000000", 8);
     
     toastBorder.setElevation(4f);
+    
     toastMessage.setText(!TextUtils.isEmpty(msg) ? msg : defaultMessage);
+    toastTitle.setText(defaultTitle);
+    
+    toastMessage.setTypeface(defaultTypeface == null ? Typeface.SERIF : defaultTypeface);
+    toastTitle.setTypeface(defaultTypeface == null ? Typeface.SERIF : defaultTypeface);
     
     toast.setView(toastView);
     toast.setDuration(length);
     return toast;
   }
 
+  public static FancyTaost bindBuilder(Builder builder) {
+    FancyTaost.builder = builder;
+    return new FancyTaost();
+  }
+  
+  public static class Builder {
+    
+    public Builder setTitle(String title) {
+      FancyTaost.defaultTitle = title;
+      return new Builder();
+    }
+    
+    public Builder setTypeface(Typeface font) {
+      FancyTaost.defaultTypeface = font;
+      return new Builder();
+    }
+  
+  }
 
   private static void RoundAndBorder(View view, String color, int border, String strokeColor, float round) {
     GradientDrawable gd = new GradientDrawable();
