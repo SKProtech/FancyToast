@@ -52,6 +52,26 @@ To display a Default Toast:
 FancyTaost.makeText(getApplicationContext(), "Example of Default Toast", FancyTaost.LENGTH_LONG, FancyTaost.DEFAULT).show();
 ```
 
+## Customization
+
+Initialization
+```java
+
+FancyTaost.Builder builder = new FancyTaost.Builder();
+```
+To set custom `Title`
+```java
+builder.setTitle("Your Custom Title");
+```
+To set custom `Typeface`
+```java
+builder.setTypeface(Typeface.SERIF);
+```
+Or
+```java
+builder.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/your_font.ttf"));
+```
+
 ## Contributing
 
 Please fork this repository and contribute back using
