@@ -30,27 +30,58 @@ dependencies {
 
 ## Usage
 
-To display an Success Toast:
+To display an `Success` Toast:
 ```java
 FancyTaost.makeText(getApplicationContext(), "Example of Success Toast", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
 ```
-To display an Warning Toast:
+To display an `Warning` Toast:
 ```java
 FancyTaost.makeText(getApplicationContext(), "Example of Warning Toast", FancyTaost.LENGTH_LONG, FancyTaost.WARNING).show();
 ```
-To display an Info Toast:
+To display an `Info` Toast:
 ```java
 FancyTaost.makeText(getApplicationContext(), "Example of Info Toast", FancyTaost.LENGTH_LONG, FancyTaost.INFO).show();
 ```
-To display an Error Toast:
+To display an `Error` Toast:
 ```java
 FancyTaost.makeText(getApplicationContext(), "Example of Error Toast", FancyTaost.LENGTH_LONG, FancyTaost.ERROR).show();
 ```
 
-To display a Default Toast:
+To display a `Default` Toast:
 ```java
 FancyTaost.makeText(getApplicationContext(), "Example of Default Toast", FancyTaost.LENGTH_LONG, FancyTaost.DEFAULT).show();
 ```
+To use `FancyTaost.Builder:`
+```java
+bindBuilder(your Builder)
+```
+## Customization
+
+Initialization
+```java
+FancyTaost.Builder builder = new FancyTaost.Builder();
+```
+To set custom `Title`
+```java
+builder.setTitle("Your Custom Title");
+```
+To set custom `Typeface`
+```java
+builder.setTypeface(Typeface.SERIF);
+```
+Or
+```java
+builder.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/your_font.ttf"));
+```
+### `Important note:`
+Use `Builder` just Before `makeText` method
+```java
+FancyTaost.bindBuilder(builder).makeText(MainActivity.this, "", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
+```
+
+## Apps using `FancyTaost`
+
+Want to be here? Open an `issue` or make a `pull request`.
 
 ## Contributing
 
