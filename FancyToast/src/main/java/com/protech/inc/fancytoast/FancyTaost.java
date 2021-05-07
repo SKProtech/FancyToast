@@ -112,11 +112,6 @@ public class FancyTaost {
     return toast;
   }
 
-  public static FancyTaost bindBuilder(Builder builder) {
-    FancyTaost.builder = builder;
-    return new FancyTaost();
-  }
-  
   public static class Builder {
     
     public Builder setTitle(String title) {
