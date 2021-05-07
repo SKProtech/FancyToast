@@ -28,7 +28,7 @@ public class FancyTaost {
   public static String defaultTitle;
   public static Typeface defaultTypeface = null;
   
-  public static Builder builder;
+  public static Builder builder = null;
   
   private static LinearLayout toastBorder;
   private static LinearLayout toastBorderContent;
@@ -43,6 +43,11 @@ public class FancyTaost {
   
     toast = new Toast(context);
     
+    if (builder != null) {
+      defaultTitle = builder.builderTitle;
+      defaultTypeface = builder.builderTypeface;
+    }
+    
     toastView = LayoutInflater.from(context).inflate(R.layout.toast_view, null);
     toastBorder = toastView.findViewById(R.id.border);
     toastBorderContent = toastView.findViewById(R.id.border_content);
@@ -53,7 +58,7 @@ public class FancyTaost {
     
     //Library Design by AnugDev
     //library Created by Protech Inc.
-    //Library Modified by Hasrat Ali
+    //Library Modified by Hasrat Ali. https://t.me/hasratAli2880
     
     switch (type) {
       case SUCCESS:
@@ -112,15 +117,23 @@ public class FancyTaost {
     return toast;
   }
 
+  public static FancyTaost bindBuilder(Builder builder) {
+    FancyTaost.builder = FancyTaost.builder == null ? new Builder() : builder;
+    return new FancyTaost();
+  }
+  
   public static class Builder {
     
+    private String builderTitle = "";
+    private Typeface builderTypeface = null;
+    
     public Builder setTitle(String title) {
-      FancyTaost.defaultTitle = title;
+      this.builderTitle = title;
       return new Builder();
     }
     
     public Builder setTypeface(Typeface font) {
-      FancyTaost.defaultTypeface = font;
+      this.builderTypeface = font;
       return new Builder();
     }
   
