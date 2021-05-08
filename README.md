@@ -32,26 +32,26 @@ dependencies {
 
 To display an `Success` Toast:
 ```java
-FancyTaost.makeText(getApplicationContext(), "Example of Success Toast", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
+FancyToast.makeText(getApplicationContext(), "Example of Success Toast", FancyToast.LENGTH_LONG, FancyToast.SUCCESS).show();
 ```
 To display an `Warning` Toast:
 ```java
-FancyTaost.makeText(getApplicationContext(), "Example of Warning Toast", FancyTaost.LENGTH_LONG, FancyTaost.WARNING).show();
+FancyToast.makeText(getApplicationContext(), "Example of Warning Toast", FancyToast.LENGTH_LONG, FancyToast.WARNING).show();
 ```
 To display an `Info` Toast:
 ```java
-FancyTaost.makeText(getApplicationContext(), "Example of Info Toast", FancyTaost.LENGTH_LONG, FancyTaost.INFO).show();
+FancyToast.makeText(getApplicationContext(), "Example of Info Toast", FancyToast.LENGTH_LONG, FancyToast.INFO).show();
 ```
 To display an `Error` Toast:
 ```java
-FancyTaost.makeText(getApplicationContext(), "Example of Error Toast", FancyTaost.LENGTH_LONG, FancyTaost.ERROR).show();
+FancyToast.makeText(getApplicationContext(), "Example of Error Toast", FancyToast.LENGTH_LONG, FancyToast.ERROR).show();
 ```
 
 To display a `Default` Toast:
 ```java
-FancyTaost.makeText(getApplicationContext(), "Example of Default Toast", FancyTaost.LENGTH_LONG, FancyTaost.DEFAULT).show();
+FancyToast.makeText(getApplicationContext(), "Example of Default Toast", FancyToast.LENGTH_LONG, FancyToast.DEFAULT).show();
 ```
-To use `FancyTaost.Builder:`
+To use `FancyToast.Builder:`
 ```java
 bindBuilder(your Builder)
 ```
@@ -59,7 +59,7 @@ bindBuilder(your Builder)
 
 Initialization
 ```java
-FancyTaost.Builder builder = new FancyTaost.Builder();
+FancyToast.Builder builder = new FancyToast.Builder();
 ```
 To set custom `Title`
 ```java
@@ -76,10 +76,10 @@ builder.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/your_font.ttf"))
 ### `Important note:`
 Use `Builder` just Before `makeText` method
 ```java
-FancyTaost.bindBuilder(builder).makeText(MainActivity.this, "", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
+FancyToast.bindBuilder(builder).makeText(MainActivity.this, "", FancyToast.LENGTH_LONG, FancyToast.SUCCESS).show();
 ```
 
-## Apps using `FancyTaost`
+## Apps using `FancyToast`
 
 Want to be here? Open an `issue` or make a `pull request`.
 
