@@ -4,63 +4,50 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.protech.inc.fancytoast.FancyTaost;
+import com.protech.inc.fancytoast.FancyToast;
 
-public class MainActivity extends Activity { 
-    private Button SuccessToast;
-	private Button WarningToast;
-	private Button InfoToast;
-	private Button ErrorToast;
+public class MainActivity extends Activity {
+
+    private Button successToast;
+	private Button warningToast;
+	private Button infoToast;
+	private Button errorToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		SuccessToast = findViewById(R.id.activitymainSuccess);
-		WarningToast = findViewById(R.id.activitymainWarning);
-		InfoToast = findViewById(R.id.activitymainInfo);
-		ErrorToast = findViewById(R.id.activitymainError);
+        
+		successToast = findViewById(R.id.activitymainSuccess);
+		warningToast = findViewById(R.id.activitymainWarning);
+		infoToast = findViewById(R.id.activitymainInfo);
+		errorToast = findViewById(R.id.activitymainError);
 
-
-
-		SuccessToast.setOnClickListener(new View.OnClickListener() {
-
+		successToast.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-
-					FancyTaost.makeText(getApplicationContext(), "Example of Success Toast Library", FancyTaost.LENGTH_LONG, FancyTaost.SUCCESS).show();
-
-
+					FancyToast.makeText(getApplicationContext(), "Example of Success Toast Library", FancyToast.LENGTH_LONG, FancyToast.SUCCESS).show();
 				}
 			});
-		WarningToast.setOnClickListener(new View.OnClickListener() {
 
+		warningToast.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-
-					FancyTaost.makeText(getApplicationContext(), "Example of Warning Toast Library", FancyTaost.LENGTH_LONG, FancyTaost.WARNING).show();
-
-
+					FancyToast.makeText(getApplicationContext(), "Example of Warning Toast Library", FancyToast.LENGTH_LONG, FancyToast.WARNING).show();
 				}
 			});
-		InfoToast.setOnClickListener(new View.OnClickListener() {
 
+		infoToast.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-
-					FancyTaost.makeText(getApplicationContext(), "Example of Info Toast Library", FancyTaost.LENGTH_LONG, FancyTaost.INFO).show();
-
-
+					FancyToast.makeText(getApplicationContext(), "Example of Info Toast Library", FancyToast.LENGTH_LONG, FancyToast.INFO).show();
 				}
 			});
-		ErrorToast.setOnClickListener(new View.OnClickListener() {
 
+		errorToast.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-
-					FancyTaost.makeText(getApplicationContext(), "Example of Error Toast Library", FancyTaost.LENGTH_LONG, FancyTaost.ERROR).show();
-
-
+					FancyToast.makeText(getApplicationContext(), "Example of Error Toast Library", FancyToast.LENGTH_LONG, FancyToast.ERROR).show();
 				}
 			});
 
