@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class FancyTaost {
+public class FancyToast {
    
   public static final int LENGTH_SHORT = 0;
   public static final int LENGTH_LONG = 1;
@@ -117,9 +117,9 @@ public class FancyTaost {
     return toast;
   }
 
-  public static FancyTaost bindBuilder(Builder builder) {
-    FancyTaost.builder = FancyTaost.builder == null ? new Builder() : builder;
-    return new FancyTaost();
+  public static FancyToast bindBuilder(Builder builder) {
+    FancyToast.builder = FancyToast.builder == null ? new Builder() : builder;
+    return new FancyToast();
   }
   
   public static class Builder {
